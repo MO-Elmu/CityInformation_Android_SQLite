@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:minHeight="?attr/listPreferredItemHeight"
+android:mode="twoLine"
+android:gravity="center_vertical"
+    >
+
+
+<TextView
+    android:id="@+id/citySearchRes"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignTop="@id/popSearchRes"
+    android:textSize="20sp"
+    android:textAppearance="?attr/textAppearanceListItem" />
+
+
+<TextView android:id="@+id/contSearchRes"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/citySearchRes"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentLeft="true"
+    android:textAppearance="?attr/textAppearanceListItemSecondary" />
+
+<TextView
+    android:id="@+id/popSearchRes"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentTop="true"
+    android:textAppearance="?attr/textAppearanceListItemSecondary" />
+
+
+</RelativeLayout>

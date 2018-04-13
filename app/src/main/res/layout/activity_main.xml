@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.stanford.cs108.cityinformation.MainActivity">
+
+    <Button
+        android:id="@+id/lookupCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LOOKUP CITIES"
+        android:onClick="lookupCity" />
+    <Button
+        android:id="@+id/addCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ADD CITY"
+        android:onClick="addCity"/>
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RESET DATABASE"
+        android:onClick="reset"/>
+
+
+</android.widget.LinearLayout>

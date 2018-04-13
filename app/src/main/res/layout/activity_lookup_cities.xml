@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.stanford.cs108.cityinformation.LookupCitiesActivity">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/continent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Continent"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/population"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Population"
+        app:layout_constraintTop_toBottomOf="@id/continent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <EditText
+        android:id="@+id/cityName"
+        android:layout_width="308dp"
+        android:layout_height="44dp"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toRightOf="@id/name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/continentName"
+        android:layout_width="308dp"
+        android:layout_height="40dp"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toRightOf="@id/continent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cityName" />
+
+    <EditText
+        android:id="@+id/populationSize"
+        android:layout_width="308dp"
+        android:layout_height="40dp"
+        android:inputType="number"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toRightOf="@id/population"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/continentName" />
+    <RadioGroup
+        android:id="@+id/greaterORless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:checkedButton="@id/greaterORequal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/populationSize">
+
+    <RadioButton
+        android:id="@+id/greaterORequal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Greater or Equal"
+        app:layout_constraintRight_toLeftOf="@id/less"
+        app:layout_constraintLeft_toLeftOf="@id/greaterORless" />
+
+    <RadioButton
+        android:id="@+id/less"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Less Than"
+        app:layout_constraintRight_toRightOf="@id/greaterORless"
+        app:layout_constraintLeft_toRightOf="@id/greaterORequal"
+
+        />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/greaterORless"
+        android:text="SEARCH"
+        android:onClick="search"/>
+
+    <ListView
+        android:id="@+id/searchResultList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search" />
+
+</android.support.constraint.ConstraintLayout>
