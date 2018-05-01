@@ -9,3 +9,7 @@ If a field is left blank, that means the user does not care about that particula
 Name and Continent search criteria is not case-sensitive which is the standard for SQL databases. For simplicity i didn't make any consideration for if the user types in any special SQL search characters something like “_o%” into one of the search fields.
 ### Add City
 Adding cities should be fairly straightforward. For simplicity some assumptions are made such as the user enters in meaningful data in all three fields, do not worry about duplicates (i.e., the user adding the same city twice) nor worry about whether or not the user enters the correct name of one of the seven continents.
+![addcity](https://user-images.githubusercontent.com/20994167/39495896-3413a1ca-4d51-11e8-85af-0651990a89ee.png)
+
+When the user clicks on “Add” in addition to adding the city to the database, clear the EditText fields, and provide the user some feedback by placing a Toast at the bottom of the screen with the new city’s name in it like this:
+![addcity2](https://user-images.githubusercontent.com/20994167/39495899-37cfffc0-4d51-11e8-904a-c46e0048fe79.png)
